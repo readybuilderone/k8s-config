@@ -70,7 +70,7 @@ spec:
         # There are no ":latest" images for helm-operator. Find the most recent
         # release or image version at https://hub.docker.com/r/fluxcd/helm-operator/tags
         # and replace the tag here.
-        image: docker.io/fluxcd/helm-operator:1.0.0
+        image: docker.io/fluxcd/helm-operator:1.2.0
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
@@ -110,6 +110,8 @@ spec:
         #
         # - name: repositories-yaml
         #   mountPath: /root/.helm/repository/repositories.yaml
+        #   subPath: repositories.yaml
+        #   readOnly: true
         #
         # Include these if you want to establish validated TLS connections
         # against Tiller; you will also need the `tiller-tls-cert` and
